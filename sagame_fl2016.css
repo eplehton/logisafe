@@ -33,7 +33,7 @@
 body {
 	margin-left: 7%;
     margin-right: 7%;
-	margin-top: 3%;
+	margin-top: 1%;
     font-family: Helvetica, sans-serif;
 	background-color: #555;
 }
@@ -61,17 +61,33 @@ body {
 	position: absolute;
 	
 	top: 3%;
-	left: 17%;
+	left: 8%;
 	z-index: 15;
 	width: 12ex;
 	height: 8ex;
 	color: white;
 	/* background-color: #4477cc; */
 	background-color: #4477cc;
+
 	border-color: #222222;
 	border-width: 1ex;
 	border-radius: 2ex;
 }
+
+#exitGameButton {
+	position: absolute;	
+	top: 3%;
+	right: 8%;
+	z-index: 15;
+	width: 3ex;
+	height: 3ex;
+	color: white;
+	background-color: #aaaaaa;	
+	border-color: #222222;
+	border-width: 1ex;
+	border-radius: 50%;
+}
+
 
 #gameLabel {
 	text-align: left;
