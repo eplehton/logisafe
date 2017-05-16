@@ -85,8 +85,9 @@ body {
 	background-color: #aaaaaa;	
 	border-color: #222222;
 	border-width: 1ex;
-	border-radius: 50%;
+	border-radius: 2ex;
 }
+
 
 
 #gameLabel {
@@ -139,8 +140,9 @@ body {
 	text-align: center;
 	
 	
-	width: 250px;
-	height: 250px;
+	/* width: 250px;
+	height: 250px; */
+	
 	border-style: solid;
 	border-width: 2px;
 	border-color: black;
