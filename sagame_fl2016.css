@@ -66,8 +66,7 @@ body {
 	width: 12ex;
 	height: 8ex;
 	color: white;
-	/* background-color: #4477cc; */
-	background-color: #4477cc;
+	background-color: #00b0ca;
 
 	border-color: #222222;
 	border-width: 1ex;
@@ -82,7 +81,7 @@ body {
 	width: 3ex;
 	height: 3ex;
 	color: white;
-	background-color: #aaaaaa;	
+	background-color: #b4be00;	
 	border-color: #222222;
 	border-width: 1ex;
 	border-radius: 2ex;
@@ -191,10 +190,11 @@ body {
 	display: none;
 	position: absolute;
 	z-index: 25;
-	border-radius: 2ex;
-	background-color: #4477cc;
-	width: 250px;
 
+	background-color: #00b0ca;
+
+	width: 250px;
+	border-radius: 25px; 
 
 	font-size: large;
 	color: #ffffff;
@@ -226,7 +226,7 @@ body {
 	bottom: 10%;
 	margin-right: 40%;
 	margin-left: 40%;
-	
+	background-color: #b4be00;
 	
 }
 
@@ -275,6 +275,27 @@ body {
 }
 
 
+.loginScreen {
+    z-index: 60;
+    display: none;
+    position: absolute;
+    top: 0%;    
+    right: 0%;
+    bottom: 0%;
+	
+	width: 100%;
+    height: 100%;
+	background-image: url('media/logisafe-login.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: white;
+	
+
+	font-size: x-large;
+	text-align: center;
+}
+
 
 .instructions {
     z-index: 50;
@@ -288,7 +309,8 @@ body {
 	/* background-color: rgba(150, 190, 150, 1);
 	// background-color: rgba(230, 230, 100, 1);
     // background-color: rgba(2, 146, 192, 1); */
-	background-color: #4477cc; /*#aaaaaa;*/
+	/* background-color: #4477cc; */
+	background-color: #00b0ca;
     color: white;
 	
 	/* font-family: 'Indie Flower', cursive; */
@@ -296,7 +318,7 @@ body {
 	text-align: center;
 	
 	
-	border-radius: 3ex;
+	border-radius: 1ex;
 }
 
 #pleasePrepareInstructions {
@@ -343,8 +365,9 @@ button {
 	height: 6ex;
 	font-size: x-large;
 	color: white;
-	background-color: #77aaff;
-
+	
+	/* background-color: #77aaff; */
+    background-color: #b4be00;
 }
 
 #currentvideo {

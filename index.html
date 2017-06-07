@@ -10,7 +10,8 @@
     <!-- <link href="http://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet" type="text/css" />-->
     
 	<script language="javascript" type="text/javascript" src="../freebike/js/jquery-2.1.4.js"></script>
-    <script language="javascript" type="text/javascript" src="../freebike/js/Dexie.min.js"></script>
+    <!-- <script language="javascript" type="text/javascript" src="../freebike/js/Dexie.min.js"></script> -->
+    <script language="javascript" type="text/javascript" src="../freebike/js/dexie.js"></script> -->
     <script language="javascript" type="text/javascript" src="../freebike/js/FileSaver.js"></script>
     <script language="javascript" type="text/javascript" src="../freebike/js/common.js"></script>
     <script language="javascript" type="text/javascript" src="../freebike/js/markerlib.js"></script>
@@ -24,11 +25,21 @@
         SAGAME.randomizeOrder = 0;
         SAGAME.clipIdLength = 11;
         SAGAME.calibInterval = 999;
+        SAGAME.LOGURL = 'logdata.php';
         var clipsets_json = 'config/fl2016_clipsets_20170517.json';
-        var targets_json = 'config/fl2016_target_20170529.json';
+        var targets_json = 'config/fl2016_targets_20170607.json';
+        //var targets_json = 'config/fl2016_target_20170529.json';
         
     
         function setupInteractionFL2016() {
+
+
+            $("#selectGamePilotti").click(function() {
+                $("#home").hide();
+                $("#gameInstructions").show();
+                SAGAME.currentClipset = SAGAME.CLIPSETS.Pilotti; 
+                SAGAME.currentGameName = 'Pilotti1';
+            });
 
 
             $("#selectGameAB").click(function() {
@@ -106,7 +117,7 @@
 
 <body>
 
-    <div id="login" class="instructions">
+    <div id="login" class="loginScreen">
         
         <p>
         Anna pelaajatunnuksesi <input id="playerId" type="text" value="" />
@@ -137,7 +148,12 @@
             <span id="scores_Harjoittelu"></span>
         </div>
         
-        
+        <div class="gameLabel">
+            <button id="selectGamePilotti">Pilotti (kesäkuu 2017)</button>
+            <span id="scores_Pilotti"></span> 
+        </div>
+
+
         <div class="gameLabel">
             <button id="selectGameAB">Pelaa A ja B</button>
             <span id="scores_AB"></span> 
