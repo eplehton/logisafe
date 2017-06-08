@@ -6,12 +6,9 @@
 	<link type="text/css" rel="stylesheet" href="sagame_fl2016.css" />
 	<title>Logisafe</title>
 
-    
-    <!-- <link href="http://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet" type="text/css" />-->
-    
+        
 	<script language="javascript" type="text/javascript" src="../freebike/js/jquery-2.1.4.js"></script>
-    <!-- <script language="javascript" type="text/javascript" src="../freebike/js/Dexie.min.js"></script> -->
-    <script language="javascript" type="text/javascript" src="../freebike/js/dexie.js"></script> -->
+    <script language="javascript" type="text/javascript" src="../freebike/js/dexie.js"></script>
     <script language="javascript" type="text/javascript" src="../freebike/js/FileSaver.js"></script>
     <script language="javascript" type="text/javascript" src="../freebike/js/common.js"></script>
     <script language="javascript" type="text/javascript" src="../freebike/js/markerlib.js"></script>
@@ -119,8 +116,11 @@
 
     <div id="login" class="loginScreen">
         
+        <h1>Logisafe</h1>
+        
         <p>
-        Anna pelaajatunnuksesi <input id="playerId" type="text" value="" />
+        Syötä pelaajatunnuksesi
+        <input id="playerId" type="text" value="" />
         </p>
         
         <p>
@@ -141,53 +141,72 @@
         <p><button id="selectGameF">Pelaa F</button></p>
         <p><button id="selectGameOngelmat">Duplikaattivideot (?)</button></p>
         -->
+        
+        <h1>Valitse peli</h1>
+        
         <div id="gameLabelContainer"> 
         
-        <div class="gameLabel">
-            <button id="showPracticeInstructions">Harjoittele</button>
-            <span id="scores_Harjoittelu"></span>
-        </div>
-        
-        <div class="gameLabel">
-            <button id="selectGamePilotti">Pilotti (kesäkuu 2017)</button>
-            <span id="scores_Pilotti"></span> 
-        </div>
+            <div class="gameLabel">
+                <button id="showPracticeInstructions">Harjoittelu
+                <br />
+                <span id="scores_Harjoittelu"></span>
+                </button>
+            </div>
+            
+            <div class="gameLabel">
+                <button id="selectGamePilotti">Pilottipeli<br >
+                <span id="scores_Pilotti"></span> 
+                </button>
+            </div>
 
 
-        <div class="gameLabel">
-            <button id="selectGameAB">Pelaa A ja B</button>
-            <span id="scores_AB"></span> 
-        </div>
-        
-        <div class="gameLabel">
-            <button id="selectGameC">Pelaa C</button>
-            <span id="scores_C"></span> 
-        </div>
-        
-        
-        <div class="gameLabel">
-            <button id="selectGameD1">Pelaa D1</button>
-            <span id="scores_D1"></span> 
-        </div>
-        
-        
-        <div class="gameLabel">
-            <button id="selectGameD2">Pelaa D2</button>
-            <span id="scores_D2"></span> 
-        </div>
-        
-        
-        <div class="gameLabel">
-            <button id="selectGameF">Pelaa F</button>
-            <span id="scores_F"></span> 
-        </div>
-        
+            <div class="gameLabel">
+                <button id="selectGameAB">
+                    Setti A ja B
+                    <br />
+                    <span id="scores_AB"></span>
+                </button>
+            </div>
+            
+            <div class="gameLabel">
+                <button id="selectGameC">Setti C
+                <br />
+                <span id="scores_C"></span>
+                </button>                
+            </div>
+            
+            
+            <div class="gameLabel">
+                <button id="selectGameD1">Setti D1
+                <br />
+                <span id="scores_D1"></span> 
+                </button>
+            </div>
+            
+            
+            <div class="gameLabel">
+                <button id="selectGameD2">Setti D2
+                <br />
+                <span id="scores_D2"></span>
+                </button>                
+            </div>
+            
+            
+            <div class="gameLabel">
+                <button id="selectGameF">Setti F</button>
+                <br />
+                <span id="scores_F"></span>
+                </button>
+            </div>
+            
         </div>
 
-        <p>Pikanäppäimet:<p>
-        <p>a = seuraava video, z = edellinen video, r = uudestaan, c = piilota/näytä maski</p>
-
+        <div>
+            <p>Pikanäppäimet:<p>
+            <p>a = seuraava video, z = edellinen video, r = uudestaan, c = piilota/näytä maski</p>
+        </div>    
     </div>
+
 
     
     <div id="endInstructions" class="instructions">
@@ -197,7 +216,6 @@
 
     </div>
 
-    
     <div id="practiceInstructions" class="instructions">
         <p>Pelissä näet videoita trukinkuljettajan näkökulmasta. <br /><br />
         Jossain vaiheessa video pysähtyy ja kuva muuttuu harmaaksi. <br /><br />
@@ -235,8 +253,8 @@
     <div class="target" id="target_template"></div>	
 
     <div id="screen">
-        <div id="points"><p>Pisteet 0</p></div>
-        <div id="exitGameButton">X</div>
+        <div id="points">0</div>
+        <div id="exitGameButton">Keskeytä</div>
         <video id="videoplayer" src="" preload="auto" muted></video> 
     </div>
 

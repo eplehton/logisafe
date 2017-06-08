@@ -2,7 +2,10 @@
  "CLIPPATH" : "videos_fl2016/",
  "CLIPSETS" : {
     "practice" : [
-    "F1-1-1_0053_GOPR40082_ihminen_tolpan_takana_0024.mp4"
+    "F1-1-1_0320_GOPR20082_kavelija_trukkivaylalla_0024.mp4",
+    "F1-1-1_0709_GOPR10082_lastauslaiturin_ja_rekan_valissa_rako_0014.mp4",
+    "F1-1-1_1059_GOPR20082_trukki_etuvasemmalla_0015.mp4",
+    "F1-1-1_1315_GOPR30082_Toisen_trukin_bluespot_nakyvissa_0017.mp4"
     ],
     "Pilotti" : [
 "D1-1-1_0010_GP150015_trukki_vasemmalla_kavelija_oikealla_030_blurrattu.mp4",
@@ -28,7 +31,7 @@
 "D1-1-1_137_GP020015_toinetrukkisivuuttaa_020_blurrattu.mp4",
 "A1-2-1_0000_GP220003_bluespotvasemmalta_026_blurrattu_2.mp4",
 "D1-1-1_100_GP020015_toinen_trukki_meinaaperuutta_024_blurrattu.mp4",
-"A1-2-1_1000_GP150003_trukin_bluespot_nakyy%20pitkaanvasemmalta_021_blurrattu.mp4",
+"A1-2-1_1000_GP150003_trukin_bluespot_nakyy_pitkaanvasemmalta_021_blurrattu.mp4",
 "C1-2-1_0410_GP012014_lavakaytavalla_012_blurrattu.mp4",
 "C1-1-1_0411_GOPRO50001_ulkoneva_lava_vasemmalla_015.mp4",
 "D2-1-1_1700_GOPR0011_levyt_oikealla_lavanreunan_yli_0028_blurrattu_2.mp4",

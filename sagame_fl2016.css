@@ -58,47 +58,67 @@ body {
 
 
 #points {
+	display: none;
 	position: absolute;
-	
 	top: 3%;
-	left: 8%;
+	left: 1%;
 	z-index: 15;
-	width: 12ex;
-	height: 8ex;
+	width: 4ex;
+	height: 2.5ex;
 	color: white;
 	background-color: #00b0ca;
-
-	border-color: #222222;
-	border-width: 1ex;
-	border-radius: 2ex;
+	border-radius: 5px;
+	
+	font-size: xx-large;
+	
 }
 
 #exitGameButton {
+	display: none;
 	position: absolute;	
 	top: 3%;
-	right: 8%;
+	right: 1%;
 	z-index: 15;
-	width: 3ex;
 	height: 3ex;
 	color: white;
 	background-color: #b4be00;	
-	border-color: #222222;
-	border-width: 1ex;
-	border-radius: 2ex;
+	padding: 1ex;
+	border-radius: 5px;
+}
+
+#logoutButton {
+	display: none;
+	position: absolute;	
+	top: 3%;
+	right: 1%;
+	z-index: 15;
+	height: 3ex;
+	color: white;
+	background-color: #b4be00;	
+	padding: 1ex;
+	border-radius: 5px;
 }
 
 
 
-#gameLabel {
-	text-align: left;
-}	
+
 
 #gameLabelContainer {
-	
 	padding: 2ex;
-	margin-left: 40%;
+	margin-left: 10%;
     text-align: left;
+	overflow: auto;
 }
+
+
+.gameLabel {
+	float: left;
+	text-align: center;
+	width: 30%;
+	margin: 1%;
+	background-color: #b4be00;
+}	
+
 
 .banner {
 	
@@ -288,7 +308,7 @@ body {
 	background-image: url('media/logisafe-login.png');
 	background-size: contain;
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: center top;
 	color: white;
 	
 
