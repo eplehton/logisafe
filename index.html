@@ -22,12 +22,6 @@
 
 
 
-            $("#selectGamePilottiA").click(function() {
-                $("#home").hide();
-                $("#gameInstructions").show();
-                SAGAME.currentClipset = SAGAME.CLIPSETS.PilottiA; 
-                SAGAME.currentGameName = 'PilottiA';
-            });
 
             $("#selectGamePilottiB").click(function() {
                 $("#home").hide();
@@ -35,6 +29,15 @@
                 SAGAME.currentClipset = SAGAME.CLIPSETS.PilottiB; 
                 SAGAME.currentGameName = 'PilottiB';
             });
+            
+            /*
+            $("#selectGamePilottiA").click(function() {
+                $("#home").hide();
+                $("#gameInstructions").show();
+                SAGAME.currentClipset = SAGAME.CLIPSETS.PilottiA; 
+                SAGAME.currentGameName = 'PilottiA';
+            });
+
 
 
             $("#selectGameAB").click(function() {
@@ -78,6 +81,7 @@
                 SAGAME.currentClipset = SAGAME.CLIPSETS.Ongelmat;
                 SAGAME.currentGameName = 'Ongelmat';
             });
+            */
         }
         
         
@@ -152,19 +156,19 @@
             </div>
             
             <!--
-            <div class="gameLabel">
+             <div class="gameLabel">
                 <button id="selectGamePilottiA">Pilotti A (vanha)<br >
                 <span id="scores_PilottiA"></span> 
                 </button>
-            </div> -->
-
+            </div> 
+            -->
             <div class="gameLabel">
                 <button id="selectGamePilottiB">Pilottitesti<br >
                 <span id="scores_PilottiB"></span> 
                 </button>
             </div>
 
-            <!-- 
+            <!--
             <div class="gameLabel">
                 <button id="selectGameAB">
                     Setti A ja B
@@ -203,8 +207,9 @@
                 <span id="scores_F"></span>
                 </button>
             </div>
+            -->
             
-        </div> -->
+        </div> 
 
         <!--
         <div>
@@ -224,6 +229,7 @@
     </div>
 
     <div id="practiceInstructions" class="instructions">
+        
         <h1>Ohjeet</h1>
                 
         

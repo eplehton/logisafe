@@ -10,4 +10,4 @@ SAGAME.LOGURL = 'logdata.php';
 
 
 var clipsets_json = 'config/fl2016_clipsets_20170517.json';
-var targets_json = 'config/fl2016_targets_20170608.json';
+var targets_json = 'config/fl2016_targets_20170609.json';
