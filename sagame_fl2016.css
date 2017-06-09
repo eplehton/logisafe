@@ -1,35 +1,5 @@
 
 
-/*body { 
-	background-color: grey;
-	padding: 0;
-	
-	font-family: sans;
-}
-
-#videoplayer {
-	width: 100%;
-	display: none;
-}
-
-#screen {
-	position: absolute;	
-	width: 80%;
-	height: 72%;
-	margin-left: 10%;
-	margin-right: 10%;
-
-	margin-top: 3%;
-
-	padding: 0;
-	
-	border-style: none;
-    background-color: #999;
-}
-
-
-*/
-
 body {
 	margin-left: 7%;
     margin-right: 7%;
@@ -54,6 +24,13 @@ body {
 	position: absolute;
 	z-index: 10;
 	background-color: #999;
+	text-align: center;
+}
+
+#videoLoadingMsg {
+	display: block;
+	font-size: xx-large;
+	color: #999;
 }
 
 

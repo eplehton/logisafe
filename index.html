@@ -13,29 +13,27 @@
     <script language="javascript" type="text/javascript" src="../freebike/js/common.js"></script>
     <script language="javascript" type="text/javascript" src="../freebike/js/markerlib.js"></script>
     <script language="javascript" type="text/javascript" src="../freebike/js/sagame.js"></script>
-	<script language="javascript" type="text/javascript">
+    <script language="javascript" type="text/javascript" src="config/config.js"></script>
+    <script language="javascript" type="text/javascript">
     
-        // configure the game
-        SAGAME.sagameStyle = 'selectone';
-        SAGAME.feedback = 'description';
-        SAGAME.showMarkers = 0;
-        SAGAME.randomizeOrder = 0;
-        SAGAME.clipIdLength = 11;
-        SAGAME.calibInterval = 999;
-        SAGAME.LOGURL = 'logdata.php';
-        var clipsets_json = 'config/fl2016_clipsets_20170517.json';
-        var targets_json = 'config/fl2016_targets_20170607.json';
-        //var targets_json = 'config/fl2016_target_20170529.json';
         
     
         function setupInteractionFL2016() {
 
 
-            $("#selectGamePilotti").click(function() {
+
+            $("#selectGamePilottiA").click(function() {
                 $("#home").hide();
                 $("#gameInstructions").show();
-                SAGAME.currentClipset = SAGAME.CLIPSETS.Pilotti; 
-                SAGAME.currentGameName = 'Pilotti1';
+                SAGAME.currentClipset = SAGAME.CLIPSETS.PilottiA; 
+                SAGAME.currentGameName = 'PilottiA';
+            });
+
+            $("#selectGamePilottiB").click(function() {
+                $("#home").hide();
+                $("#gameInstructions").show();
+                SAGAME.currentClipset = SAGAME.CLIPSETS.PilottiB; 
+                SAGAME.currentGameName = 'PilottiB';
             });
 
 
@@ -153,13 +151,20 @@
                 </button>
             </div>
             
+            <!--
             <div class="gameLabel">
-                <button id="selectGamePilotti">Pilottipeli<br >
-                <span id="scores_Pilotti"></span> 
+                <button id="selectGamePilottiA">Pilotti A (vanha)<br >
+                <span id="scores_PilottiA"></span> 
+                </button>
+            </div> -->
+
+            <div class="gameLabel">
+                <button id="selectGamePilottiB">Pilottitesti<br >
+                <span id="scores_PilottiB"></span> 
                 </button>
             </div>
 
-
+            <!-- 
             <div class="gameLabel">
                 <button id="selectGameAB">
                     Setti A ja B
@@ -199,12 +204,14 @@
                 </button>
             </div>
             
-        </div>
+        </div> -->
 
+        <!--
         <div>
             <p>Pikanäppäimet:<p>
             <p>a = seuraava video, z = edellinen video, r = uudestaan, c = piilota/näytä maski</p>
-        </div>    
+        </div>
+        -->
     </div>
 
 
@@ -217,19 +224,23 @@
     </div>
 
     <div id="practiceInstructions" class="instructions">
+        <h1>Ohjeet</h1>
+                
+        
         <p>Pelissä näet videoita trukinkuljettajan näkökulmasta. <br /><br />
         Jossain vaiheessa video pysähtyy ja kuva muuttuu harmaaksi. <br /><br />
         Harmaalla taustalla on ympyröitä.<br /><br /> 
         Valitse ympyröistä se jonka kohdalla 
         oli turvallisuuden kannalta tärkein huomioitava tai varottava asia. 
-        
         </p>
+        <p>Oikeasta valinnasta saat pisteen ja väärästä menetät.</p>
         <br />
         <button id="startPractice">Pelaa</button>
     </div>
 
 
     <div id="gameInstructions" class="instructions">
+        <h1>Ohjeet</h1>
         <p>Pelissä näet videoita trukinkuljettajan näkökulmasta. <br /><br />
         Jossain vaiheessa video pysähtyy ja kuva muuttuu harmaaksi. <br /><br />
         Harmaalla taustalla on ympyröitä.<br /><br /> 
@@ -237,6 +248,7 @@
         oli turvallisuuden kannalta tärkein huomioitava tai varottava asia. 
         
         </p>
+        <p>Oikeasta valinnasta saat pisteen ja väärästä menetät.</p>
         <br />
         <button id="startGame">Pelaa</button>
     </div>
@@ -258,7 +270,9 @@
         <video id="videoplayer" src="" preload="auto" muted></video> 
     </div>
 
-    <div id="videoMask"></div>
+    <div id="videoMask">
+        <div id="videoLoadingMsg"><p>Ladataan videota...</p></div>
+    </div>
 
     <button id="checkbutton">Tarkista</button> 
     <button id="nextbutton">Seuraava</button>
