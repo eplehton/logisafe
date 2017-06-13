@@ -28,9 +28,13 @@ body {
 }
 
 #videoLoadingMsg {
-	display: block;
+	display: none;
+	position: absolute;
+	z-index: 50;
+	top: 5%;
+	left: 10%;
 	font-size: xx-large;
-	color: #999;
+	color: #aaa;
 }
 
 

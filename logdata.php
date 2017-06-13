@@ -9,12 +9,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   } else {
       $player_id = $data['player_id'];
       
-      if (ctype_alnum($player_id) && strlen($player_id) < 50) {
-        $filename = "logisafedata/". $player_id .".json.". time();
+      if (strlen($player_id) < 50) {
+        $escaped_player_id = preg_replace('/[^A-Za-z0-9_\-]/', '_', $player_id);
+        $filename = "logisafedata/". $escaped_player_id .'.'. time() .".json";
         file_put_contents($filename, $input_str);
-        print($filename);
+        
       } else {
-        print("player_id too long or non-alphanumeric.");
+        print("player_id too long");
       }
   }
 
