@@ -21,6 +21,13 @@
         function setupInteractionFL2016() {
 
 
+            $("#selectGamePractice").click(function() {
+                $("#home").hide();
+                $("#gameInstructions").show();
+                SAGAME.currentClipset = SAGAME.CLIPSETS.practice; 
+                SAGAME.currentGameName = 'practice';
+            });
+
 
 
             $("#selectGamePilottiB").click(function() {
@@ -37,37 +44,68 @@
                 SAGAME.currentClipset = SAGAME.CLIPSETS.PilottiA; 
                 SAGAME.currentGameName = 'PilottiA';
             });
+            */
 
 
-
-            $("#selectGameAB").click(function() {
+            $("#selectGameTest1").click(function() {
                 $("#home").hide();
                 $("#gameInstructions").show();
-                SAGAME.currentClipset = SAGAME.CLIPSETS.AB; 
-                SAGAME.currentGameName = 'AB';
+                SAGAME.currentClipset = SAGAME.CLIPSETS.Test1; 
+                SAGAME.currentGameName = 'Test1';
             });
 
-            $("#selectGameC").click(function() {
+            $("#selectGameTest2").click(function() {
                 $("#home").hide();
                 $("#gameInstructions").show();
-                SAGAME.currentClipset = SAGAME.CLIPSETS.C;
-                SAGAME.currentGameName = 'C';                
+                SAGAME.currentClipset = SAGAME.CLIPSETS.Test2;
+                SAGAME.currentGameName = 'Test2';                
             });
 
-            $("#selectGameD1").click(function() {
+            $("#selectGameTest3").click(function() {
                 $("#home").hide();
                 $("#gameInstructions").show();
-                SAGAME.currentClipset = SAGAME.CLIPSETS.D1;
-                SAGAME.currentGameName = 'D1';                
-            });
-            
-            $("#selectGameD2").click(function() {
-                $("#home").hide();
-                $("#gameInstructions").show();
-                SAGAME.currentClipset = SAGAME.CLIPSETS.D2;
-                SAGAME.currentGameName = 'D2';                
+                SAGAME.currentClipset = SAGAME.CLIPSETS.Test3;
+                SAGAME.currentGameName = 'Test3';                
             });
             
+            $("#selectGameT1").click(function() {
+                $("#home").hide();
+                $("#gameInstructions").show();
+                SAGAME.currentClipset = SAGAME.CLIPSETS.T1;
+                SAGAME.currentGameName = 'T1';                
+            });
+            
+            $("#selectGameT2").click(function() {
+                $("#home").hide();
+                $("#gameInstructions").show();
+                SAGAME.currentClipset = SAGAME.CLIPSETS.T2;
+                SAGAME.currentGameName = 'T2';                
+            });
+
+            $("#selectGameT3").click(function() {
+                $("#home").hide();
+                $("#gameInstructions").show();
+                SAGAME.currentClipset = SAGAME.CLIPSETS.T3;
+                SAGAME.currentGameName = 'T3';                
+            });
+
+
+            $("#selectGameT4").click(function() {
+                $("#home").hide();
+                $("#gameInstructions").show();
+                SAGAME.currentClipset = SAGAME.CLIPSETS.T4;
+                SAGAME.currentGameName = 'T4';                
+            });
+
+            $("#selectGameT5").click(function() {
+                $("#home").hide();
+                $("#gameInstructions").show();
+                SAGAME.currentClipset = SAGAME.CLIPSETS.T5;
+                SAGAME.currentGameName = 'T5';                
+            });
+
+
+            /*
             $("#selectGameF").click(function() {
                 $("#home").hide();
                 $("#gameInstructions").show();
@@ -149,9 +187,9 @@
         <div id="gameLabelContainer"> 
         
             <div class="gameLabel">
-                <button id="showPracticeInstructions">Harjoittelu
+                <button id="selectGamePractice">Harjoittelu
                 <br />
-                <span id="scores_Harjoittelu"></span>
+                <span id="scores_practice"></span>
                 </button>
             </div>
             
@@ -168,39 +206,70 @@
                 </button>
             </div>
 
-            <!--
+            
             <div class="gameLabel">
-                <button id="selectGameAB">
-                    Setti A ja B
+                <button id="selectGameTest1">
+                    Testi 1
                     <br />
-                    <span id="scores_AB"></span>
+                    <span id="scores_Test1"></span>
                 </button>
             </div>
             
             <div class="gameLabel">
-                <button id="selectGameC">Setti C
+                <button id="selectGameTest2">Testi 2
                 <br />
-                <span id="scores_C"></span>
+                <span id="scores_Test2"></span>
                 </button>                
             </div>
             
             
             <div class="gameLabel">
-                <button id="selectGameD1">Setti D1
+                <button id="selectGameTest3">Testi 3
                 <br />
-                <span id="scores_D1"></span> 
+                <span id="scores_Test3"></span> 
                 </button>
             </div>
             
             
             <div class="gameLabel">
-                <button id="selectGameD2">Setti D2
+                <button id="selectGameT1">Peli 1
                 <br />
-                <span id="scores_D2"></span>
+                <span id="scores_T1"></span>
                 </button>                
             </div>
             
-            
+            <div class="gameLabel">
+                <button id="selectGameT2">Peli 2
+                <br />
+                <span id="scores_T2"></span>
+                </button>                
+            </div>
+
+
+            <div class="gameLabel">
+                <button id="selectGameT3">Peli 3
+                <br />
+                <span id="scores_T3"></span>
+                </button>                
+            </div>
+
+
+            <div class="gameLabel">
+                <button id="selectGameT4">Peli 4
+                <br />
+                <span id="scores_T4"></span>
+                </button>                
+            </div>
+
+            <div class="gameLabel">
+                <button id="selectGameT5">Peli 5
+                <br />
+                <span id="scores_T5"></span>
+                </button>                
+            </div>
+
+
+            <!--
             <div class="gameLabel">
                 <button id="selectGameF">Setti F</button>
                 <br />
