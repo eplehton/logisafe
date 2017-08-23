@@ -1,6 +1,7 @@
 
 // SAGAME is a GLOBAL var defined in the freebike lib
 SAGAME.sagameStyle = 'selectone';
+SAGAME.fastResponseLimit = 2;
 SAGAME.feedback = 'description';
 SAGAME.showMarkers = 0;
 SAGAME.randomizeOrder = 1;
