@@ -11,7 +11,7 @@ SAGAME.LOGURL = 'logdata.php';
 SAGAME.SAVESCORESURL = 'savescores.php';
 
 SAGAME.checkPlayerID = 1;
-SAGAME.validPlayerIDs = ['test', 'test1', 'test3']; // this is not security measure, but to limit using wrong ids
+SAGAME.validPlayerIDs = ['test', 'test1', 'test2', 'ida1', 'ida2', 'esko1', 'esko2']; // this is not security measure, but to limit using wrong ids
 
-var clipsets_json = 'config/fl2016_clipsets_20170819.json';
+var clipsets_json = 'config/fl2016_clipsets_20170907.json';
 var targets_json = 'config/fl2016_targets_20170614.json';
