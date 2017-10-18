@@ -14,7 +14,7 @@
     <script language="javascript" type="text/javascript" src="../freebike/js/common.js"></script>
     <script language="javascript" type="text/javascript" src="../freebike/js/markerlib.js"></script>
     <script language="javascript" type="text/javascript" src="../freebike/js/sagame.js"></script>
-    <script language="javascript" type="text/javascript" src="config/config.js"></script>
+    <script language="javascript" type="text/javascript" src="config/config200.js"></script>
     <script language="javascript" type="text/javascript">
     
         function showScores(gameName) {
@@ -44,7 +44,7 @@
             $("#gamePractice").show();
             
             $("#gameTest1").hide();
-            if ((new Date("2017-09-01").getTime() < Date.now()) && (Date.now() < new Date("2030-01-01").getTime())) {
+            if ((new Date("2017-09-01").getTime() < Date.now()) && (Date.now() < new Date("2030-10-21").getTime())) {
                 try {
                     if (scores != null && scores['practice']['completed'] == 1) {
                         $("#gameTest1").show();
@@ -53,7 +53,7 @@
             } 
             
              $("#gameTest2").hide();
-            if ((new Date("2017-09-01").getTime() < Date.now()) && (Date.now() < new Date("2030-01-01").getTime())) {
+            if ((new Date("2017-09-01").getTime() < Date.now()) && (Date.now() < new Date("2017-10-21").getTime())) {
                 try { 
                     if (scores != null && scores['Test1']['completed'] == 1) {
                         $("#gameTest2").show();
@@ -62,7 +62,7 @@
             }
             
              $("#gameIntervention1").hide();
-            if ((new Date("2017-09-01").getTime() < Date.now()) && (Date.now() < new Date("2030-01-01").getTime())) {
+            if ((new Date("2017-10-19").getTime() < Date.now()) && (Date.now() < new Date("2017-10-23").getTime())) {
                 try { 
                     if (scores != null && scores['Test2']['completed'] == 1) {
                         $("#gameIntervention1").show();
@@ -71,7 +71,7 @@
             } 
             
             $("#gameIntervention2").hide();
-            if ((new Date("2017-09-01").getTime() < Date.now()) && (Date.now() < new Date("2030-01-01").getTime())) {
+            if ((new Date("2017-09-01").getTime() < Date.now()) && (Date.now() < new Date("2030-10-23").getTime())) {
                 try { 
                     if (scores != null && scores['Inter1']['completed'] == 1) {
                         $("#gameIntervention2").show();
@@ -80,7 +80,7 @@
             } 
             
             $("#gameIntervention3").hide();
-            if ((new Date("2017-09-01").getTime() < Date.now()) && (Date.now() < new Date("2030-01-01").getTime())) {
+            if ((new Date("2017-09-01").getTime() < Date.now()) && (Date.now() < new Date("2030-10-23").getTime())) {
                 try { 
                     if (scores != null && scores['Inter2']['completed'] == 1) {
                         $("#gameIntervention3").show();
@@ -88,7 +88,7 @@
                 } catch (e) { }
             } 
             $("#gameIntervention4").hide();
-            if ((new Date("2017-09-01").getTime() < Date.now()) && (Date.now() < new Date("2030-01-01").getTime())) {
+            if ((new Date("2017-09-01").getTime() < Date.now()) && (Date.now() < new Date("2030-10-23").getTime())) {
                 try { 
                     if (scores != null && scores['Inter3']['completed'] == 1) {
                         $("#gameIntervention4").show();
@@ -97,7 +97,7 @@
             } 
             
             $("#gameIntervention5").hide();
-            if ((new Date("2017-09-01").getTime() < Date.now()) && (Date.now() < new Date("2030-01-01").getTime())) {
+            if ((new Date("2017-09-01").getTime() < Date.now()) && (Date.now() < new Date("2030-10-23").getTime())) {
                 try { 
                     if (scores != null && scores['Inter4']['completed'] == 1) {
                         $("#gameIntervention5").show();
@@ -106,11 +106,11 @@
             } 
             
              $("#gameTest3").hide();
-            if ((new Date("2017-09-01").getTime() < Date.now()) && (Date.now() < new Date("2030-01-01").getTime())) {
+            if ((new Date("2017-10-20").getTime() < Date.now()) && (Date.now() < new Date("2030-10-25").getTime())) {
                 try { 
-                    if (scores != null && scores['Inter5']['completed'] == 1) {
+                    // if (scores != null && scores['Inter5']['completed'] == 1) {
                         $("#gameTest3").show();
-                    }
+                    //}
                 } catch (e) { }
             }
             
