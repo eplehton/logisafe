@@ -67,13 +67,15 @@ body {
 	border-radius: 5px;
 }
 
+
+
 #logoutButton {
-	display: none;
+	display: block;
 	position: absolute;	
 	top: 3%;
 	right: 1%;
 	z-index: 15;
-	height: 3ex;
+	/*height: 3ex;*/
 	color: white;
 	background-color: #b4be00;	
 	padding: 1ex;
@@ -82,23 +84,31 @@ body {
 
 
 
-
+#home {
+    background-color: #555555;
+}
 
 #gameLabelContainer {
 	padding: 2ex;
-	margin-left: 30%;
-	margin-right: 30%;
+	margin-left: 25%;
+	margin-right: 25%;
 	text-align: center;
-
 }
-
+	
 .gameLabel {
 	text-align: center;
 	width: 100%;
 	margin: 1%;
-	background-color: #b4be00;
+	background-color: #00b0ca;
+	padding: 1ex;
+	border-radius: 5px;
 }
 
+.gameButton {
+	background-color: #b4be00;
+	padding: 1ex;
+	border-radius: 1px;
+}
 /*
 .gameLabel {
 	float: left;

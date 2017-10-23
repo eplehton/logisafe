@@ -24,8 +24,8 @@
             var scores = getScores(gameName);
             var txt = "";
             if (scores == null) {
-                txt = 'Ei vielä pelattu läpi';
-            } else {
+                txt = ""; 
+                } else {
                 txt = 'Pisteet: '+ scores.points + "/" + scores.maxPoints;
             }
             $("#scores_"+ gameName).html(txt);
@@ -33,88 +33,134 @@
 
     
         function showGames() {
-        
-            var scores = null;
+            var playerScores = null;
+            var timeline = null;
+            
+            
             try {
-                scores = JSON.parse(localStorage.getItem("Freebike.SAGame.scores"));
+                playerScores = JSON.parse(localStorage.getItem("Freebike.SAGame.scores"));
             } catch (e) {
                 console.log("Scores not available");
             }
             
             $("#gamePractice").show();
             
+            
+            timeline = SAGAME.timeline['Test1'];
             $("#gameTest1").hide();
-            if ((new Date("2017-09-01").getTime() < Date.now()) && (Date.now() < new Date("2030-01-01").getTime())) {
+            if ((new Date(timeline.start).getTime() < Date.now()) && (Date.now() < new Date(timeline.end).getTime())) {
                 try {
-                    if (scores != null && scores['practice']['completed'] == 1) {
+                    
+                    if (playerScores != null && playerScores[timeline.require]['completed'] == 1) {
                         $("#gameTest1").show();
+                        if (playerScores['Test1']['completed'] == 1) {
+                            $("#selectGameTest1").hide();
+                            $("#instructionsTest1").hide();
+                        } 
+                        
                     }
-                } catch (e) { }
+                } catch (e) {  console.log(e); }
             } 
             
-             $("#gameTest2").hide();
-            if ((new Date("2017-09-01").getTime() < Date.now()) && (Date.now() < new Date("2030-01-01").getTime())) {
-                try { 
-                    if (scores != null && scores['Test1']['completed'] == 1) {
+            timeline = SAGAME.timeline['Test2'];
+            $("#gameTest2").hide();
+            if ((new Date(timeline.start).getTime() < Date.now()) && (Date.now() < new Date(timeline.end).getTime())) {
+                try {
+                    if (playerScores != null && playerScores[timeline.require]['completed'] == 1) {
                         $("#gameTest2").show();
+                        if (playerScores['Test2']['completed'] == 1) {
+                            $("#selectGameTest2").hide();
+                            $("#instructionsTest2").hide();
+                        } 
+                        
                     }
-                } catch (e) { }
+                } catch (e) { console.log(e); }
             }
-            
+
+            timeline = SAGAME.timeline['Inter1'];
              $("#gameIntervention1").hide();
-            if ((new Date("2017-09-01").getTime() < Date.now()) && (Date.now() < new Date("2030-01-01").getTime())) {
-                try { 
-                    if (scores != null && scores['Test2']['completed'] == 1) {
+            if ((new Date(timeline.start).getTime() < Date.now()) && (Date.now() < new Date(timeline.end).getTime())) {
+                try {
+                    if (playerScores != null && playerScores[timeline.require]['completed'] == 1) {
                         $("#gameIntervention1").show();
+                        if (playerScores['Inter1']['completed'] == 1) {
+                            $("#selectGameInter1").hide();
+                            $("#instructionsInter1").hide();
+                        } 
+
                     }
-                 } catch (e) { }
+                 } catch (e) { console.log(e); }
             } 
             
+            timeline = SAGAME.timeline['Inter2'];
             $("#gameIntervention2").hide();
-            if ((new Date("2017-09-01").getTime() < Date.now()) && (Date.now() < new Date("2030-01-01").getTime())) {
-                try { 
-                    if (scores != null && scores['Inter1']['completed'] == 1) {
+            if ((new Date(timeline.start).getTime() < Date.now()) && (Date.now() < new Date(timeline.end).getTime())) {
+                try {
+                    if (playerScores != null && playerScores[timeline.require]['completed'] == 1) {
                         $("#gameIntervention2").show();
+                        if (playerScores['Inter2']['completed'] == 1) {
+                            $("#selectGameInter2").hide();
+                            $("#instructionsInter2").hide();
+                        } 
                     }
-                } catch (e) { }
+                } catch (e) {  console.log(e); }
             } 
             
+            timeline = SAGAME.timeline['Inter3'];
             $("#gameIntervention3").hide();
-            if ((new Date("2017-09-01").getTime() < Date.now()) && (Date.now() < new Date("2030-01-01").getTime())) {
-                try { 
-                    if (scores != null && scores['Inter2']['completed'] == 1) {
+            if ((new Date(timeline.start).getTime() < Date.now()) && (Date.now() < new Date(timeline.end).getTime())) {
+                try {
+                    if (playerScores != null && playerScores[timeline.require]['completed'] == 1) {
                         $("#gameIntervention3").show();
+                        if (playerScores['Inter3']['completed'] == 1) {
+                            $("#selectGameInter3").hide();
+                            $("#instructionsInter3").hide();
+                        } 
                     }
-                } catch (e) { }
+                        
+                } catch (e) {  console.log(e);}
             } 
+            
+            timeline = SAGAME.timeline['Inter4'];
             $("#gameIntervention4").hide();
-            if ((new Date("2017-09-01").getTime() < Date.now()) && (Date.now() < new Date("2030-01-01").getTime())) {
-                try { 
-                    if (scores != null && scores['Inter3']['completed'] == 1) {
+            if ((new Date(timeline.start).getTime() < Date.now()) && (Date.now() < new Date(timeline.end).getTime())) {
+                try {
+                    if (playerScores != null && playerScores[timeline.require]['completed'] == 1) {
                         $("#gameIntervention4").show();
+                        if (playerScores['Inter4']['completed'] == 1) {
+                            $("#selectGameInter4").hide();
+                            $("#instructionsInter4").hide();
+                        } 
+                        
                     }
-                } catch (e) { }
+                } catch (e) {  console.log(e); }
             } 
             
+            timeline = SAGAME.timeline['Inter5'];
             $("#gameIntervention5").hide();
-            if ((new Date("2017-09-01").getTime() < Date.now()) && (Date.now() < new Date("2030-01-01").getTime())) {
-                try { 
-                    if (scores != null && scores['Inter4']['completed'] == 1) {
+            if ((new Date(timeline.start).getTime() < Date.now()) && (Date.now() < new Date(timeline.end).getTime())) {
+                try {
+                    if (playerScores != null && playerScores[timeline.require]['completed'] == 1) {
                         $("#gameIntervention5").show();
+                        if (playerScores['Inter5']['completed'] == 1) {
+                            $("#selectGameInter5").hide();
+                            $("#instructionsInter5").hide();
+                        } 
                     }
-                } catch (e) { }
+                } catch (e) {  console.log(e); }
             } 
             
-             $("#gameTest3").hide();
-            if ((new Date("2017-09-01").getTime() < Date.now()) && (Date.now() < new Date("2030-01-01").getTime())) {
-                try { 
-                    if (scores != null && scores['Inter5']['completed'] == 1) {
+            $("#gameTest3").hide();
+            timeline = SAGAME.timeline['Test3'];
+            if ((new Date(timeline.start).getTime() < Date.now()) && (Date.now() < new Date(timeline.end).getTime())) {
+                try {
+                    if (playerScores != null && playerScores[timeline.require]['completed'] == 1) {
                         $("#gameTest3").show();
                     }
-                } catch (e) { }
+                } catch (e) { console.log(e); }
             }
             
-            if (scores != null) {
+            if (playerScores != null) {
                 showScores('practice');
                 showScores('Test1');
                 showScores('Test2');
@@ -297,91 +343,94 @@
     </div>
 
     <div id="home" class="instructions">
-        
-        
-        <h1>Valitse peli</h1>
-        
-		<div>
-			<p>Uusi peli avautuu kun olet pelannut edellisen läpi.</p>
-            <p>Halutessasi voit pelata pelejä uudestaan ja parantaa pisteitäsi.</p>
-        </div>
+        <button id="logoutButton" onclick="window.location.reload()">Kirjaudu ulos</button>
 		
         <div id="gameLabelContainer"> 
 
 
 
             <div id="gameTest3" class="gameLabel">
-                <button id="selectGameTest3">
-                Lopputesti (20 videota)
-                <br />
-                <span id="scores_Test3"></span> 
-                </button>
+                <h2>Lopputesti</h2>
+                <button class="gameButton" id="selectGameTest3">Pelaa</button>
+                <p><span id="scores_Test3"></span></p>
+                <p id="instructionsTest3">
+                Tee lopuksi lopputesti yhdellä pelikerralla. Varaa sen tekemiseen noin 20 minuuttia.
+                </p>
             </div>
             
             <div id="gameIntervention5" class="gameLabel">
-                <button id="selectGameInter5">
-                Peli 5 (10 videota)
-                <br />
-                <span id="scores_Inter5"></span>
-                </button>                
+                <h2>Peli 5</h2>
+                <button class="gameButton" id="selectGameInter5">Pelaa</button>
+                <p><span id="scores_Inter5"></span></p>
+                <p id="instructionsInter5">
+                 Jokaisessa pelissä on 10 videota. Uusi peli avautuu kun olet pelannut edellisen kokonaan läpi. 
+                </p>                 
             </div>
 
             <div id="gameIntervention4" class="gameLabel">
-                <button id="selectGameInter4">
-                Peli 4 (10 videota)
-                <br />
-                <span id="scores_Inter4"></span>
-                </button>                
+                <h2>Peli 4</h2>
+                <button class="gameButton" id="selectGameInter4">Pelaa</button>
+                <p><span id="scores_Inter4"></span></p>
+                <p id="instructionsInter4">
+                 Jokaisessa pelissä on 10 videota. Uusi peli avautuu kun olet pelannut edellisen kokonaan läpi. 
+                </p>                 
             </div>
 
             <div id="gameIntervention3" class="gameLabel">
-                <button id="selectGameInter3">
-                Peli 3 (10 videota)
-                <br />
-                <span id="scores_Inter3"></span>
-                </button>                
+                <h2>Peli 3</h2>
+                <button class="gameButton" id="selectGameInter3">Pelaa</button>
+                <p><span id="scores_Inter3"></span></p>                
+                <p id="instructionsInter3">
+                 Jokaisessa pelissä on 10 videota. Uusi peli avautuu kun olet pelannut edellisen kokonaan läpi. 
+                </p>                
             </div>
             
             <div id="gameIntervention2" class="gameLabel">
-                <button id="selectGameInter2">
-                Peli 2 (10 videota)
-                <br />
-                <span id="scores_Inter2"></span>
-                </button>                
+                <h2>Peli 2</h2>
+                <button class="gameButton" id="selectGameInter2">Pelaa</button> 
+                <p><span id="scores_Inter2"></span></p>
+                <p id="instructionsInter2">
+                 Jokaisessa pelissä on 10 videota. Uusi peli avautuu kun olet pelannut edellisen kokonaan läpi. 
+                </p>
             </div>
 
             <div id="gameIntervention1" class="gameLabel">
-                <button id="selectGameInter1">
-                Peli 1 (10 videota)
-                <br />
-                <span id="scores_Inter1"></span>
-                </button>                
+                <h2>Peli 1</h2>
+                <button class="gameButton" id="selectGameInter1">Pelaa</button>
+                <p><span id="scores_Inter1"></span></p>
+                <p id="instructionsInter1">
+                Pelejä on yhteensä viisi. Jokaisessa on 10 videota. Uusi peli avautuu kun olet pelannut edellisen kokonaan läpi. 
+                </p>
             </div>
             
 
             
             <div id="gameTest2" class="gameLabel">
-                <button id="selectGameTest2">
-                Välitesti (20 videota)
-                <br />
-                <span id="scores_Test2"></span>
-                </button>                
+                <h2>Välitesti</h2>
+                <button class="gameButton" id="selectGameTest2">Pelaa</button>
+                <p><span id="scores_Test2"></span></p>
+                <p id="instructionsTest2">
+                Tee koko testi yhdellä pelikerralla ja varaa sen tekemiseen noin 20 minuuttia.
+                </p>
             </div>
             
             <div id="gameTest1" class="gameLabel">
-                <button id="selectGameTest1">
-                    Alkutesti (20 videota)
-                    <br />
-                    <span id="scores_Test1"></span>
-                </button>
+                <h2>Alkutesti</h2>
+                <button class="gameButton" id="selectGameTest1">Pelaa</button>
+                <p><span id="scores_Test1"></span></p>
+                <p id="instructionsTest1">
+                Tee koko testi yhdellä pelikerralla ja varaa sen tekemiseen noin 20 minuuttia.
+                </p>
             </div>
 
             <div id="gamePractice" class="gameLabel">
-                <button id="selectGamePractice">
-                    Harjoittelu (4 videota)
-                    <br />
-                    <span id="scores_practice"></span>
-                </button>
+                <h2>Harjoittelu</h2>
+                <p><span id="scores_practice"></span></p>
+                <button class="gameButton" id="selectGamePractice">Pelaa</button>
+                <p id="instructionsPractice">
+                Tutustu peliin pelaamalla lyhyt harjoituspeli, joka sisältää neljä videota.
+                </p>
+                    
             </div>
 
 
@@ -399,9 +448,9 @@
 
     
     <div id="endInstructions" class="instructions">
-        <p>Hienoa! Pelasit kaikki videot. </p>
+        <p>Onneksi olkoon! Pelasit kaikki tämän osion videot. </p>
         
-        <p>Pisteet: <span id="scoresAfterDisplay"></span></p>
+        <p>Saamasi pisteet: <span id="scoresAfterDisplay"></span></p>
 
         <p><button id="goHomeAfterGameButton">Aloitussivulle</button></p>
 
@@ -524,6 +573,8 @@
     <img id="marker2" src="media/marker2.png" />
     <img id="marker3" src="media/marker3.png" />
     <img id="marker4" src="media/marker4.png" /> -->
+    
+    
     
     
 </body>
