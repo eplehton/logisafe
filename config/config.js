@@ -12,8 +12,7 @@ SAGAME.calibInterval = 999;
 SAGAME.LOGURL = 'logdata.php';
 SAGAME.SAVESCORESURL = 'savescores.php';
 
-SAGAME.videoFolder = "videos_fl2016";
-
+SAGAME.scoresFolder = 'scoresdata';
 
 // this is not security measure, but to prevent using wrong ids
 SAGAME.checkPlayerID = 1;
