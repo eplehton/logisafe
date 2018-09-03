@@ -16,6 +16,27 @@ var LOGISAFE = {};
         }
 
     
+        function showDemo() {
+            var playerScores = null;
+            var timeline = null;
+            
+            try {
+                playerScores = JSON.parse(localStorage.getItem("Freebike.SAGame.scores"));
+            } catch (e) {
+                console.log("Scores not available");
+            }
+            
+            /* $("#gamePractice").show();
+            $("#instructionsPractice").show();
+            $("#selectGamePractice").show(); 
+            */ 
+            
+            $("#gameDemo").show();
+            $("#instructionsDemo").show();
+            $("#selectGameDemo").show(); 
+        
+        }
+        
         function showGames() {
             var playerScores = null;
             var timeline = null;
@@ -190,6 +211,12 @@ var LOGISAFE = {};
                 SAGAME.currentGameName = 'practice';
             });
 
+            $("#selectGameDemo").click(function() {
+                $("#home").hide();
+                $("#gameInstructions").show();
+                SAGAME.currentClipset = SAGAME.CLIPSETS.demo; 
+                SAGAME.currentGameName = 'demo';
+            });
 
 
             $("#selectGamePilottiB").click(function() {
@@ -257,21 +284,41 @@ var LOGISAFE = {};
             });
 
 
-            /*
-            $("#selectGameF").click(function() {
+            $("#selectGameClipsA").click(function() {
+                $("#home").hide();
+                $("#gameInstructions").show();
+                SAGAME.currentClipset = SAGAME.CLIPSETS.A;
+                SAGAME.currentGameName = 'A';            
+            });
+            
+            $("#selectGameClipsB").click(function() {
+                $("#home").hide();
+                $("#gameInstructions").show();
+                SAGAME.currentClipset = SAGAME.CLIPSETS.B;
+                SAGAME.currentGameName = 'B';                
+            });
+            
+            $("#selectGameClipsC").click(function() {
+                $("#home").hide();
+                $("#gameInstructions").show();
+                SAGAME.currentClipset = SAGAME.CLIPSETS.C;
+                SAGAME.currentGameName = 'C';                
+            });
+            
+            $("#selectGameClipsD").click(function() {
+                $("#home").hide();
+                $("#gameInstructions").show();
+                SAGAME.currentClipset = SAGAME.CLIPSETS.D;
+                SAGAME.currentGameName = 'D';                
+            });
+            
+            $("#selectGameClipsF").click(function() {
                 $("#home").hide();
                 $("#gameInstructions").show();
                 SAGAME.currentClipset = SAGAME.CLIPSETS.F;
                 SAGAME.currentGameName = 'F';                
             });
             
-            $("#selectGameOngelmat").click(function() {
-                $("#home").hide();
-                $("#gameInstructions").show();
-                SAGAME.currentClipset = SAGAME.CLIPSETS.Ongelmat;
-                SAGAME.currentGameName = 'Ongelmat';
-            });
-            */
             
             // this is set also in the game proper, but we need them to display the games correctly
             $("#goHomeAfterGameButton").click(function() {
@@ -317,7 +364,12 @@ var LOGISAFE = {};
                 
                 var playerID = sessionStorage.getItem("Freebike.SAGame.player_id");
                 getScoresFromServer(playerID).always( function() {
-                    showGames();
+                    
+                    if (LOGISAFE.isDemo) {
+                        showDemo();
+                    } else {
+                        showGames();
+                    }
                 });
             });
         
